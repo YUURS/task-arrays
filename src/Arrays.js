@@ -29,12 +29,13 @@ export function arrayFiltering(data) {
   значения из первых двух массивов, и верните его в качестве результата функции.
 */
 export function arrayPushing(array1, array2) {
-  let array3 = new Array(10);
-  for (let i; i<10; i++) {
+  let array3 = new Array();
+  for (let i=0; i<10; i++) {
     if (i%2==0) {
-      array3.push(array1[i/2])
+      array3.push(array1[Math.floor(i/2)])
     } else {
-      array3.push(array2[(i-1)/2])
+      array3.push(array2[Math.floor((i-1)/2)])
     }
   }
+  return array3
 }
